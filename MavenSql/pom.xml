@@ -59,9 +59,9 @@
 			<id>profile-production</id>
 			<properties>
 				<environment>prod</environment>
-				<db.username>root</db.username>
-				<db.password>root</db.password>
-				<db.url>jdbc:mysql://localhost:3306/database2</db.url>
+				<db.username>prod</db.username>
+				<db.password>prod</db.password>
+				<db.url>jdbc:mysql://172.17.1.113:3306/database2</db.url>
 				<db.dialect>org.hibernate.dialect.MySQL5Dialect</db.dialect>
 				<db.driver>com.mysql.jdbc.Driver</db.driver>
 			</properties>
