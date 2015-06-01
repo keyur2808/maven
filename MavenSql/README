@@ -1,7 +1,7 @@
 To execute this project do the following:
 1) Install MySQL on dev and prod
 2) Make the uname "root" and password "root" for dev MySQL
-3) Make the uname "root" and password "root" for dev MySQL
+3) Make the uname "prod" and password "prod" for prod MySQL
 4) MySQL Dev:
    Create Database: database1
    Create table: emp (id int, name varchar(20))
@@ -19,3 +19,4 @@ To execute this project do the following:
    a) Maven Build: Goal = package and Profiles = profile-production
    b) If Build successful run the App.java
    c) It show the output in the Console
+9) The POM file gives the connection details.
