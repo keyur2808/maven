@@ -10,4 +10,12 @@ To execute this project do the following:
    Create Database: database2
    Create table: emp (id int, name varchar(20))
    Data to be inserted: (3, John Snow), (4, Daenerys)
-6) Execute accordingly
+6) Maven clean the project
+7) For Developemnt profile:
+   a) Maven Build: Goal = package and Profiles = profile-development
+   b) If Build successful run the App.java
+   c) It show the output in the Console
+8) For Developemnt profile:
+   a) Maven Build: Goal = package and Profiles = profile-production
+   b) If Build successful run the App.java
+   c) It show the output in the Console
