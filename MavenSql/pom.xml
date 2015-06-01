@@ -35,7 +35,7 @@
 				<environment>dev</environment>
 				<db.username>root</db.username>
 				<db.password>root</db.password>
-				<db.url>jdbc:mysql://localhost:8990/database1</db.url>
+				<db.url>jdbc:mysql://localhost:3306/database1</db.url>
 				<db.dialect>org.hibernate.dialect.MySQL5Dialect</db.dialect>
 				<db.driver>com.mysql.jdbc.Driver</db.driver>
 			</properties>
@@ -61,7 +61,7 @@
 				<environment>prod</environment>
 				<db.username>root</db.username>
 				<db.password>root</db.password>
-				<db.url>jdbc:mysql://localhost:8990/database2</db.url>
+				<db.url>jdbc:mysql://localhost:3306/database2</db.url>
 				<db.dialect>org.hibernate.dialect.MySQL5Dialect</db.dialect>
 				<db.driver>com.mysql.jdbc.Driver</db.driver>
 			</properties>
