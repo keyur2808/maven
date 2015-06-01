@@ -13,3 +13,13 @@ when weaving type org.eclipse.jdt.internal.launching.JREContainerInitializer
 when weaving classes 
 when weaving 
  [Xlint:cantFindType]
+2015-05-31 23:45:08,664 ERROR [Worker-3] - System.err - [org.eclipse.jdt.debug.ui] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.debug.ui.launchConfigurations.JavaAppletLaunchShortcut
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2015-05-31 23:45:09,085 ERROR [Worker-3] - System.err - [org.eclipse.jdt.junit] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.junit.launcher.JUnitLaunchShortcut
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
