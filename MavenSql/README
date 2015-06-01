@@ -1,7 +1,7 @@
 To execute this project do the following:
 1) Install MySQL on dev and prod
 2) Make the uname "root" and password "root" for dev MySQL
-3) Make the uname "root" and password "ankit" for dev MySQL
+3) Make the uname "root" and password "root" for dev MySQL
 4) MySQL Dev:
    Create Database: database1
    Create table: emp (id int, name varchar(20))
