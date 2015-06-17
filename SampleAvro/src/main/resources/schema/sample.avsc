@@ -1,4 +1,4 @@
-{"namespace": "com.avro.example",
+{"namespace": "com.cloudwick.avro",
  "type": "record",
  "name": "Employee",
  "fields": [
