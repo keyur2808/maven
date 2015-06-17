@@ -1,0 +1,5 @@
+package com.cloudwick.avro.AvroWithoutCodeGenerator;
+
+public class AvroSerializer {
+
+}

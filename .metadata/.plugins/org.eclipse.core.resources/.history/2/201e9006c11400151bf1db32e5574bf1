@@ -1,0 +1,3 @@
+{"id": 101, "name": "Rhonda", "designation": "Hadoop Engineer", "mgrid": 25, "hiredate": "05-18-2015", "salary": 100000.0, "commission": null, "deptid": 21}
+{"id": 201, "name": "Salena", "designation": "Java Programmer", "mgrid": 73, "hiredate": "03-19-2016", "salary": 102000.0, "commission": 2242.0, "deptid": 73}
+{"id": 2914, "name": "Melissa", "designation": "Marketing Manager", "mgrid": 8910, "hiredate": "12-12-2014", "salary": 434351.0, "commission": null, "deptid": 343}
