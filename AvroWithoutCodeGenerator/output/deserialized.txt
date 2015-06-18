@@ -1,0 +1,2 @@
+{"id": 3810, "name": "Sydney", "designation": "Spark Developer", "mgrid": 83291, "hiredate": "02-06-1990", "salary": 140000.0, "commission": 882.0, "deptid": 8302}
+{"id": 1739, "name": "Herold", "designation": "Cassandra Admin", "mgrid": 77291, "hiredate": "12-16-1972", "salary": 73900.0, "commission": 0.0, "deptid": 7719}

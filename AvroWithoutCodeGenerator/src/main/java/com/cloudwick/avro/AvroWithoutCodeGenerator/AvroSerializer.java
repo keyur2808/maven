@@ -19,7 +19,7 @@ public class AvroSerializer {
 	public static void main(String... args) throws IOException {
 		// Read the .avsc file and serialize it
 		Schema schema = new Schema.Parser().parse(new File(
-				"resources/schema/schema.avsc"));
+				"src/main/resources/schema/schema.avsc"));
 
 		// Create a GenericRecord object to create new data
 		GenericRecord record1 = new GenericData.Record(schema);
