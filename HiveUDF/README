@@ -1,0 +1,7 @@
+To Register the UDF in Hive:
+
+CREATE FUNCTION totsal AS 'com.cloudwick.hive.HiveUDF.TotalSalaryUDF'
+USING JAR 'hdfs:///cloudwick/jars/HiveUDF.jar';
+
+once registered, Execute using
+SELECT totsal(id, deptid) FROM empDetails;
