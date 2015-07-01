@@ -1,20 +1,22 @@
 To Register the UDF in Hive:
 
-CREATE FUNCTION totsal AS 'com.cloudwick.hive.HiveUDF.TotalSalaryUDF'
-USING JAR 'hdfs:///cloudwick/jars/HiveUDF.jar';
+ADD JAR /root/cloudwick/HiveUDF-0.0.1-SNAPSHOT.jar;
+CREATE TEMPORARY FUNCTION upperrize AS 'com.cloudwick.hive.HiveUDF.Upperrize';
 
 once registered, Execute using
-SELECT totsal(id, deptid) FROM empDetails;
+SELECT upperrize(name) FROM empDetails;
 
 ISSUE:
+FAILED: SemanticException [Error 10001]: Line 1:28 Table not found 'empDetails'
+hive> select upperrize(name) from cloudwick.empDetails;
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-15/07/01 11:18:16 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-15/07/01 11:18:17 WARN conf.Configuration: file:/tmp/root/hive_2015-07-01_11-18-12_229_8044416451158680682-1/-local-10003/jobconf.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
-15/07/01 11:18:17 WARN conf.Configuration: file:/tmp/root/hive_2015-07-01_11-18-12_229_8044416451158680682-1/-local-10003/jobconf.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
-Execution log at: /tmp/root/root_20150701111818_605b5f6f-5c36-4eb8-9090-e83fcb831df2.log
-java.io.FileNotFoundException: File does not exist: hdfs://localhost:9000/tmp/2dd5ff9d-0b44-4117-aa54-5efae4164a9e_resources/HiveUDF.jar
+15/07/01 22:00:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+15/07/01 22:00:15 WARN conf.Configuration: file:/tmp/root/hive_2015-07-01_22-00-08_590_2605668709776204197-1/-local-10003/jobconf.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+15/07/01 22:00:15 WARN conf.Configuration: file:/tmp/root/hive_2015-07-01_22-00-08_590_2605668709776204197-1/-local-10003/jobconf.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+Execution log at: /tmp/root/root_20150701220000_8391a864-a6b1-43c9-85a0-573aed76c1e1.log
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:9000/root/cloudwick/HiveUDF-0.0.1-SNAPSHOT.jar
 	at org.apache.hadoop.hdfs.DistributedFileSystem$17.doCall(DistributedFileSystem.java:1083)
 	at org.apache.hadoop.hdfs.DistributedFileSystem$17.doCall(DistributedFileSystem.java:1075)
 	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
@@ -46,7 +48,7 @@ java.io.FileNotFoundException: File does not exist: hdfs://localhost:9000/tmp/2d
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.apache.hadoop.util.RunJar.main(RunJar.java:212)
-Job Submission failed with exception 'java.io.FileNotFoundException(File does not exist: hdfs://localhost:9000/tmp/2dd5ff9d-0b44-4117-aa54-5efae4164a9e_resources/HiveUDF.jar)'
+Job Submission failed with exception 'java.io.FileNotFoundException(File does not exist: hdfs://localhost:9000/root/cloudwick/HiveUDF-0.0.1-SNAPSHOT.jar)'
 Execution failed with exit status: 1
 Obtaining error information
 
