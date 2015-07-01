@@ -5,3 +5,56 @@ USING JAR 'hdfs:///cloudwick/jars/HiveUDF.jar';
 
 once registered, Execute using
 SELECT totsal(id, deptid) FROM empDetails;
+
+ISSUE:
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+15/07/01 11:18:16 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+15/07/01 11:18:17 WARN conf.Configuration: file:/tmp/root/hive_2015-07-01_11-18-12_229_8044416451158680682-1/-local-10003/jobconf.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+15/07/01 11:18:17 WARN conf.Configuration: file:/tmp/root/hive_2015-07-01_11-18-12_229_8044416451158680682-1/-local-10003/jobconf.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+Execution log at: /tmp/root/root_20150701111818_605b5f6f-5c36-4eb8-9090-e83fcb831df2.log
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:9000/tmp/2dd5ff9d-0b44-4117-aa54-5efae4164a9e_resources/HiveUDF.jar
+	at org.apache.hadoop.hdfs.DistributedFileSystem$17.doCall(DistributedFileSystem.java:1083)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$17.doCall(DistributedFileSystem.java:1075)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1075)
+	at org.apache.hadoop.mapreduce.filecache.ClientDistributedCacheManager.getFileStatus(ClientDistributedCacheManager.java:288)
+	at org.apache.hadoop.mapreduce.filecache.ClientDistributedCacheManager.getFileStatus(ClientDistributedCacheManager.java:224)
+	at org.apache.hadoop.mapreduce.filecache.ClientDistributedCacheManager.determineTimestamps(ClientDistributedCacheManager.java:93)
+	at org.apache.hadoop.mapreduce.filecache.ClientDistributedCacheManager.determineTimestampsAndCacheVisibilities(ClientDistributedCacheManager.java:57)
+	at org.apache.hadoop.mapreduce.JobSubmitter.copyAndConfigureFiles(JobSubmitter.java:265)
+	at org.apache.hadoop.mapreduce.JobSubmitter.copyAndConfigureFiles(JobSubmitter.java:301)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:394)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1295)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1292)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1614)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1292)
+	at org.apache.hadoop.mapred.JobClient$1.run(JobClient.java:564)
+	at org.apache.hadoop.mapred.JobClient$1.run(JobClient.java:559)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1614)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:559)
+	at org.apache.hadoop.mapred.JobClient.submitJob(JobClient.java:550)
+	at org.apache.hadoop.hive.ql.exec.mr.ExecDriver.execute(ExecDriver.java:420)
+	at org.apache.hadoop.hive.ql.exec.mr.ExecDriver.main(ExecDriver.java:740)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:212)
+Job Submission failed with exception 'java.io.FileNotFoundException(File does not exist: hdfs://localhost:9000/tmp/2dd5ff9d-0b44-4117-aa54-5efae4164a9e_resources/HiveUDF.jar)'
+Execution failed with exit status: 1
+Obtaining error information
+
+Task failed!
+Task ID:
+  Stage-1
+
+Logs:
+
+/tmp/root/hive.log
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.mr.MapRedTask
